@@ -11,6 +11,73 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
+  <style>
+    #nav {
+        list-style: none inside;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    #nav li {
+        display: block;
+        position: relative;
+        float: right;
+        background: #ffffff;
+        z-index: 1;
+        /* menu background color */
+    }
+
+    #nav li a {
+        display: block;
+        padding: 0;
+        text-decoration: none;
+        width: 200px;
+        /* this is the width of the menu items */
+        line-height: 35px;
+        /* this is the hieght of the menu items */
+        color: #000000;
+        /* list item font color */
+    }
+
+    /* smaller font size for sub menu items */
+
+    #nav li:hover {
+        background: #ddd;
+    }
+
+    /* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+    #nav ul {
+        position: absolute;
+        padding: 0;
+        right: 0;
+        display: none;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        /* hides sublists */
+    }
+
+    #nav li:hover ul ul {
+        display: none;
+    }
+
+    /* hides sub-sublists */
+
+    #nav li:hover ul {
+        display: block;
+    }
+
+    /* shows sublist on hover */
+
+    #nav li li:hover ul {
+        display: block;
+        /* shows sub-sublist on hover */
+        margin-right: 200px;
+        /* this should be the same width as the parent list item */
+        margin-top: -35px;
+        /* aligns top of sub menu with top of list item */
+    }
+</style>
 </head>
 
 <body>
@@ -22,14 +89,129 @@
         <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
+      
+      <div>
+        <ul id="nav">
+          <li><a href="#" style="width:100%">Menu</a>
+              <ul>
+                  <li><a href="#">&#171; Characters</a>
+                      <ul>
+                          <li><a href="#">ImaginaryArchers</a>
+                          <li><a href="#">ImaginaryAssassins</a>
+                          <li><a href="#">ImaginaryAstronauts</a>
+                          <li><a href="#">ImaginaryKnights</a>
+                          <li><a href="#">ImaginaryLovers</a>
+                          <li><a href="#">ImaginaryMythology</a>
+                          <li><a href="#">ImaginaryNobles</a>
+                          <li><a href="#">ImaginaryScholars</a>
+                          <li><a href="#">ImaginarySoldiers</a>
+                          <li><a href="#">ImaginaryWarriors</a>
+                          <li><a href="#">ImaginaryWitches</a>
+                          <li><a href="#">ImaginaryWizards</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Races</a>
+                      <ul>
+                          <li><a href="#">ImaginaryAngels</a>
+                          <li><a href="#">ImaginaryDwarves</a>
+                          <li><a href="#">ImaginaryElves</a>
+                          <li><a href="#">ImaginaryFaeries</a>
+                          <li><a href="#">ImaginaryHumans</a>
+                          <li><a href="#">ImaginaryImmortals</a>
+                          <li><a href="#">ImaginaryMerfolk</a>
+                          <li><a href="#">ImaginaryOrcs</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Landscapes</a>
+                      <ul>
+                          <li><a href="#">ImaginaryBattlefields</a>
+                          <li><a href="#">ImaginaryCityscapes</a>
+                          <li><a href="#">ImaginaryHellscapes</a>
+                          <li><a href="#">ImaginaryMindscapes</a>
+                          <li><a href="#">ImaginaryPathways</a>
+                          <li><a href="#">ImaginarySeascapes</a>
+                          <li><a href="#">ImaginarySkyscapes</a>
+                          <li><a href="#">ImaginaryStarscapes</a>
+                          <li><a href="#">ImaginaryWastelands</a>
+                          <li><a href="#">ImaginaryWeather</a>
+                          <li><a href="#">ImaginaryWindlands</a>
+                          <li><a href="#">ImaginaryWorlds</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Architecture</a>
+                      <ul>
+                          <li><a href="#">ImaginaryArchitecture</a>
+                          <li><a href="#">ImaginaryCastles</a>
+                          <li><a href="#">ImaginaryDwellings</a>
+                          <li><a href="#">Imaginaryinterior</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Monstors</a>
+                      <ul>
+                          <li><a href="#">ImaginaryBeasts</a>
+                          <li><a href="#">ImaginaryBehemoths</a>
+                          <li><a href="#">ImaginaryCarnage</a>
+                          <li><a href="#">ImaginaryDemons</a>
+                          <li><a href="#">ImaginaryDragons</a>
+                          <li><a href="#">ImaginaryElements</a>
+                          <li><a href="#">ImaginaryHorrors</a>
+                          <li><a href="#">ImaginaryHybrids</a>
+                          <li><a href="#">ImaginaryLeviathans</a>
+                          <li><a href="#">ImaginaryMonsterGirls</a>
+                          <li><a href="#">ImaginaryUndead</a>
+                          <li><a href="#">ImaginaryWorldEaters</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Technology</a>
+                      <ul>
+                          <li><a href="#">ImaginaryArmor</a>
+                          <li><a href="#">ImaginaryCybernetics</a>
+                          <li><a href="#">ImaginaryCyberpunk</a>
+                          <li><a href="#">ImaginaryFutureWar</a>
+                          <li><a href="#">ImaginaryFuturism</a>
+                          <li><a href="#">ImaginaryMechs</a>
+                          <li><a href="#">ImaginaryPortals</a>
+                          <li><a href="#">ImaginaryRobotics</a>
+                          <li><a href="#">ImaginaryStarships</a>
+                          <li><a href="#">ImaginarySteampunk</a>
+                          <li><a href="#">ImaginaryVehicles</a>
+                          <li><a href="#">ImaginaryWeaponry</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Fandoms</a>
+                      <ul>
+                          <li><a href="#">ImaginaryAzeroth</a>
+                          <li><a href="#">ImaginaryDarkSouls</a>
+                          <li><a href="#">ImaginaryFallout</a>
+                          <li><a href="#">ImaginaryJedi</a>
+                          <li><a href="#">ImaginaryKanto</a>
+                          <li><a href="#">ImaginaryMavel</a>
+                          <li><a href="#">ImaginaryMiddleEarth</a>
+                          <li><a href="#">ImaginaryNecronomicon</a>
+                          <li><a href="#">ImaginaryTamriel</a>
+                          <li><a href="#">ImaginaryWarhammer</a>
+                          <li><a href="#">ImaginaryWesteros</a>
+                          <li><a href="#">ImaginaryWitcher</a>
+                      </ul>
+                  </li>
+                  <li><a href="#">&#171; Misc</a>
+                      <ul>
+                          <li><a href="#">ImaginaryAwww</a>
+                          <li><a href="#">ImaginaryBestOf</a>
+                          <li><a href="#">ImaginaryColorscapes</a>
+                          <li><a href="#">ImaginaryFeels</a>
+                          <li><a href="#">ImaginaryPets</a>
+                          <li><a href="#">ImaginarySliceOfLife</a>
+                          <li><a href="#">ImaginaryNetwork</a>
+                          <li><a href="#">ImaginaryTurtleWorlds</a>
+                          <li><a href="#">ImaginaryUnofficial</a>
+                      </ul>
+                  </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
     </nav>
-    <div class="below-navbar navbar d-flex-row justify-content-start">
-      <a href="#" class="nav-link nav-item text-dark">ImaginaryLandscapes</a>
-      <a href="#" class="nav-link nav-item text-dark">ImaginaryMonsters</a>
-      <a href="#" class="nav-link nav-item text-dark">ImaginaryAstronauts</a>
-      <a href="#" class="nav-link nav-item text-dark">ImaginaryThings</a>
-      <a href="#" class="nav-link nav-item text-dark">ImaginaryFeels</a>
-    </div>
   </div>
   <div class="container">
     <h1 class="bootstrap-heading">ImaginarySomething</h1>
