@@ -11,5 +11,5 @@ def index(request):
 
 
 def content_page(request):
-    posts = ine_component.get_posts('mumbai',10)
-    return render(request, 'content.html', {'name_of_subreddit': 'mumbai', 'posts': posts})
+    posts = ine_component.get_posts('ImaginaryDemons',10)
+    return render(request, 'content.html', {'name_of_subreddit': 'ImaginaryDemons', 'posts': posts})
