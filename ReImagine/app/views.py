@@ -5,4 +5,4 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 def homepage(request):
-    return render(request, 'index.html')
+    return render(request, 'content.html')
