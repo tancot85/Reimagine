@@ -10,8 +10,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Document</title>
   <style>
+    p {
+        background-color: lightgrey;
+        width: 200px;
+        border: 2px solid green;
+        padding: 5px;
+        margin: 5px;
+    }
     #nav {
         list-style: none inside;
         margin: 0;
@@ -90,9 +98,9 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
       
-      <div>
+      <div class="mr-auto" style="margin-left: 20px;">
         <ul id="nav">
-          <li><a href="#" style="width:100%">Menu</a>
+          <li><a class="btn btn-outline-success my-2 my-sm-0" href="#" style="width:100%"> MENU </a>
               <ul>
                   <li><a href="#">&#171; Characters</a>
                       <ul>
@@ -211,11 +219,48 @@
             </li>
           </ul>
       </div>
+      
+     <div class="ml-auto" style="margin-right: 50px;" >  
+       
+      {% if user.is_authenticated %}
+      
+      <p class="btn btn-outline-success my-2 my-sm-0">NAME: {{user.first_name}} {{ user.last_name}}</p>
+      <p class="btn btn-outline-success my-2 my-sm-0">USERNAME: {{user.username}}</p>
+
+
+      <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'edit_profile' %}">EDIT PROFILE</a>
+
+      <a class="btn btn-outline-success my-2 my-sm-0" href="https://discord.com/login">LOGIN TO DISCORD</a>
+
+
+      <a class="btn btn-outline-success my-2 my-sm-0" href="https://discord.com/api/oauth2/authorize?client_id=848227146127114250&permissions=201328657&scope=bot">CONNECT BOT</a>
+      
+      <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'logout' %}">LOGOUT</a>
+
+    
+    
+    {% else %}
+        
+      <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'login' %}">LOGIN</a>
+    
+
+    
+      <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'register' %}">REGISTER</a>
+   
+
+    {% endif%}
+
+      
+    </div>   
     </nav>
   </div>
-  {%block content%}
+ 
+ 
 
-  {%endblock%}
+{% block content %}
+
+
+{%endblock%}
 </body>
 
 </html>
