@@ -30,12 +30,6 @@ class INE:
     #         user_agent=self.__user_agent,
     #         username=self.__username,
     #     )
-    reddit = praw.Reddit(client_id="dnl4Gn5p2NjgG0KcYOKP6g",
-                         client_secret="bZbGyWRap4yXhm0rnS57T9TxLLAppg",
-                         password="RandomPassword69",
-                         user_agent="testscript by u/RagingBox8",
-                         username="RagingBox8"
-                         )
     __categorires = ['characters', 'races', 'lands', 'architecture',
                      'monsters', 'technology', 'fandoms', 'misc', 'friends']
 
